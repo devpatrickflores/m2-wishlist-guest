@@ -1,0 +1,16 @@
+<?php
+use PF\WishlistGuest\Block\Customer\Wishlist\Button;
+use Magento\Framework\Escaper;
+
+?>
+
+<?php if ($sharedUrl = $block->getSharedUrl()): ?>
+    <button type="button"
+            name="copy_link_for_sharing"
+            title="<?= $escaper->escapeHtmlAttr(__('Copy Link for Sharing')) ?>"
+            class="action copy-link-for-sharing"
+            data-shared-url="<?= $escaper->escapeHtmlAttr($sharedUrl) ?>"
+            data-mage-init='{"wishlistButtonShareLink": {}}'>
+        <span><?= $escaper->escapeHtml(__('Copy Link for Sharing')) ?></span>
+    </button>
+<?php endif; ?>
